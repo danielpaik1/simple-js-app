@@ -52,12 +52,12 @@ let pokemonList = pokemonRepository.getAll();
 //       document.write(pokemonList[i].name + " (" + pokemonList[i].height + " meter) " + " is a " + pokemonList[i].type + " type! <br>")
 //     }
 //   }
-pokemonList.forEach(function(pokemonList) {
-  if (pokemonList.height > 0.5) { 
-    console.log(pokemonList.name + " is " + pokemonList.height + " meters tall. Wow! Thats a big pokemon! " + " It is a " + pokemonList.type + "type.");
+pokemonList.forEach(function(pokemon) {
+  if (pokemon.height > 0.5) { 
+    console.log(pokemon.name + " is " + pokemon.height + " meters tall. Wow! Thats a big pokemon! " + " It is a " + pokemon.type + "type.");
     }
   else{ 
-    console.log(pokemonList.name + " is " + pokemonList.height + " meters tall " + " and is a " + pokemonList.type + "type.");
+    console.log(pokemon.name + " is " + pokemon.height + " meters tall " + " and is a " + pokemon.type + "type.");
   }
 })
   
