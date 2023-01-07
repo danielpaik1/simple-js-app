@@ -22,10 +22,11 @@ let pokemonRepository = (function () {
 
 
 //function to add a pokemon to the pokemonList array
-  function add(pokemon) {
+ 
+  function add (pokemon) {
     pokemonList.push(pokemon);
   }
-  function getAll() {
+  function getAll () {
     return pokemonList;
   }
   return {
@@ -37,6 +38,7 @@ let pokemonRepository = (function () {
 })();
 
 let pokemonList = pokemonRepository.getAll();
+
   pokemonRepository.add({ name: 'Charmander', height: 0.6, type: ['fire']});
   pokemonRepository.add({ name: 'Pikachu', height: 0.4, type: ['electricity']});
   pokemonRepository.add({ name: 'Bulbasaur', height: 0.7, type: ['Grass']});
@@ -50,7 +52,7 @@ let pokemonList = pokemonRepository.getAll();
 //       document.write(pokemonList[i].name + " (" + pokemonList[i].height + " meter) " + " is a " + pokemonList[i].type + " type! <br>")
 //     }
 //   }
-pokemonList.forEach(function(printDetails) {
+pokemonList.forEach(function(pokemonList) {
   if (pokemonList.height > 0.5) { 
     console.log(pokemonList.name + " is " + pokemonList.height + " meters tall. Wow! Thats a big pokemon! " + " It is a " + pokemonList.type + "type.");
     }
